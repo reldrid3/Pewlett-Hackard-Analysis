@@ -30,3 +30,16 @@ SELECT COUNT(uni_tit.emp_no) as Number_of_Retirees, uni_tit.title as Title
 	ORDER BY Number_of_Retirees DESC;
 
 -- DELIVERABLE #2
+-- Create membership_eligibility table by joining three tables with DISTINCT ON
+DROP TABLE IF EXISTS mentorship_eligibility;
+SELECT DISTINCT ON (emp.emp_no) emp.emp_no, emp.first_name, emp.last_name, emp.birth_date,
+		d_emp.from_date, d_emp.to_date, tit.title
+	INTO mentorship_eligibility
+	FROM employees as emp
+	JOIN dept_emp as d_emp
+	ON emp.emp_no = d_emp.emp_no
+	JOIN titles as tit
+	ON emp.emp_no = tit.emp_no
+	WHERE emp.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+		AND d_emp.to_date = '9999-01-01'
+	ORDER BY emp.emp_no;
