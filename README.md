@@ -38,7 +38,7 @@ Derivative Tables were created from the respective queries in [Employee_Database
 ![Screenshot of retiring_titles](Images/retiring_by_title.png)
 
 #### mentorship_eligibility
-- Table created of current employees who are eligibile to be mentors this year specifically - only those born in 1965.
+- Table created of current employees who are eligible to be mentors this year specifically - only those born in 1965.
 - **1549 current employees born in 1965 who can mentor younger employees**
 
 ## Summary
