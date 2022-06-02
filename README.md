@@ -47,6 +47,12 @@ Derivative Tables were created from the respective queries in [Employee_Database
 The total number of potentially retiring employees is **72,458*, which is just over **24%** of the workforce.  That represents a huge hiring crunch, upcoming.
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-Based on the mentorship data that we collected, I would be very concerned that we have enough employees to mentor the next generation.  That said, I'm not sure why people born in "1965" was
+Based on the mentorship data that we collected (1549 employees), based on a birth year of 1965, I would be very concerned that we have enough employees to mentor the next generation.
 
 ### Additional Queries or Tables
+1. Mentorship Query
+  - It makes no sense that the mentorship data should be based on a birth year of 1965.  This doesn't take into account how long the person has been at Pewlett-Hackard (they may have been hired at an older age), nor does it set a period of time that said mentor should mentor for before likely retirement.  Setting a sensible set of mentor criteria would lead to a much more accurate Mentorship Query.
+2. Years Employeed
+  - Creating an additional column of data to count the number of years that an employee has been employed at Pewlett-Hackard could also be useful for determining mentorship eligibility.  Using the titles table to look for employees who are still employed and assign them a time based on their first and last entry in the titles database (and possibly looking for time off in between) could give a list of employees who have been with Pewlett-Hackard the longest and therefore may have the most experience.
+3. Current Employees Grouped by Title
+  - We know that a large majority of the retirees are senior staff (which makes sense), but we don't know what percentage of the total workforce is senior staff, and therefore don't know what % of our senior staff are potential retirees.  Using COUNT() and GROUP BY on the employees table, without the retirement birth-date criteria, will give us a total number of staff by title that we can compare to, and even get retiring percentages by title.
