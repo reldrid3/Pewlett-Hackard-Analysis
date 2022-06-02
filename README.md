@@ -22,6 +22,8 @@ This analysis was commissioned to analyze the overall age of the employees at Pe
 ### Derivative Tables (Results)
 Derivative Tables were created from the respective queries in [Employee_Database_challenge.sql](Queries/Employee_Database_challenge.sql)
 
+Key bullet points are **BOLDED** below.
+
 #### retirement_titles
 - Table created of every employee-title combination where the employee was born between 1952 and 1955, and potentially at the cusp of retiring.
 - Duplicate employee entries are expected for any employees who have held more than one title at their time at Pewlett-Hackard.
